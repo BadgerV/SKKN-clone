@@ -1,0 +1,74 @@
+.product {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 2fr;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.product_middle_part {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.product_info_cont{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+}
+
+.product_name {
+    font-size: 0.8em;
+    font-weight: 500;
+}
+.product_rating {
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.product_volume {
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.product_price {
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.product_singleOrRefill{
+    display: flex;
+    flex-direction: row;
+    gap: 0.4em;
+}
+.product_single {
+    background-color: black;
+    color: white;
+    border-radius: 1.2em;
+    padding: 7px 12px;
+    font-size: 0.8em;
+}
+.product_refill {
+    background-color: rgb(230, 221, 221);
+    color: black;
+    border-radius: 1.2em;
+    padding: 7px 12px;
+    font-size: 0.8em;
+}
+
+.peoduct_right_part {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    gap: 0.05em;
+    align-items: center;
+}
+
+.product_add_to_cart {
+    font-size: 0.6em;
+}
+
+.product_icon1 {
+    display: flex;
+    align-items: center;
+}

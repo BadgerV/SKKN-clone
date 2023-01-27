@@ -1,0 +1,35 @@
+.mainSection3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    padding: 2em;
+    margin-top: 3em;
+}
+
+.mainSection3_title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    display: block;
+    
+}
+
+.mainSection3_text {
+    font-weight: 400;
+    font-weight: 0.5em;
+    display: block;
+    margin-bottom: 2em;
+}
+
+.mainSection3_readMore{
+    font-size: 0.75em;
+    padding: 1em 0.8em;
+    background-color: rgb(33, 32, 31);
+    color: white;
+    max-width: fit-content;
+    position: absolute;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

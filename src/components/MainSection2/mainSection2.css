@@ -1,0 +1,12 @@
+.mainSection2 {
+    width: 100%;
+    padding: 1.5em;
+    margin-top: 3em;
+}
+
+.mainSection2_ritual {
+    font-size: 1.5em;
+    display: block;
+    margin-bottom: 1.5em;
+    font-weight: 500;
+}

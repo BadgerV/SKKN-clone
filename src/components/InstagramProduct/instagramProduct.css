@@ -1,0 +1,71 @@
+.InstagramProductsNew {
+    margin-top: 3em;
+    padding: 2em;
+}
+
+.intsgaramProducts {
+    position: relative;
+    
+    height: 20em;
+    width: 22em;
+}
+
+.instaImage_cont {
+    background-position: center;
+    background-size: cover;
+    height: inherit;
+    width: inherit;
+}
+
+
+.insta_img {
+    background-position: center;
+    background-size: contain;
+}
+
+.instaOverlay {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    flex-direction: column;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(19, 20, 19, 0.7);
+}
+
+
+
+.insta_icon {
+    stroke-width: 1;
+    color: white;
+    cursor: pointer;
+}
+.insta_shopNow {
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    margin-top: 2em;
+}
+
+.instInnerCOnt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.insta_skkn {
+        color: white;
+        font-weight: 400;
+}
+
+.insta_likes {
+    color: white;
+        font-weight: 400;
+}
+
+.intsgaramProducts:hover .instaOverlay {
+    display: flex;
+}

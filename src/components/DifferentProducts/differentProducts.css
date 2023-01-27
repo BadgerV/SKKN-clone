@@ -1,0 +1,17 @@
+.differentProducts{
+    display: grid;
+    padding: 1.5em 3em;
+    gap: 1.5em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 3em;
+}
+
+
+.differentProductContainer_img_cont{
+    margin-bottom: 1em;
+}
+
+.differentProduct_name {
+    font-size: 1.7em;
+    font-weight: 500;
+}

@@ -1,0 +1,87 @@
+.buying_container {
+    margin: 0 0.5em;
+}
+
+.buying {
+    display: flex;
+    flex-direction: column;
+}
+
+.buying_img_div {
+    height: 30em;
+    width: 100%;
+    overflow: hidden ;
+    margin-bottom: 1em;
+}
+
+.buying_img {
+    height: inherit;
+    width: 100%;
+    background-position: center;
+}
+
+.buying_typeAndPrice {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buying_typeAndPrice_left {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+}
+
+.buying_type {
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.buying_star_cont {
+    display: flex;
+    align-items: center;
+
+}
+
+
+.buying_price {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.singleOrRefill{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+.buying_single {
+    background-color: black;
+    color: white;
+    border-radius: 1.2em;
+    padding: 7px 12px;
+    font-size: 0.9em;
+}
+.buying_refill {
+    background-color: rgb(230, 221, 221);
+    color: black;
+    border-radius: 1.2em;
+    padding: 7px 12px;
+    font-size: 0.9em;
+}
+
+.buying_add_to_cart {
+    background-color: transparent;
+    border: 1px solid black;
+    font-size: 0.9em;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.buying_add_to_cart:hover {
+    background-color: black;
+    color: white;
+}

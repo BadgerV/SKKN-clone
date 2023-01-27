@@ -1,0 +1,52 @@
+.mainSection4 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2em;
+    padding: 1.5em;
+    margin-top: 3em;
+}
+
+.mainSection4_left{
+    height: 27em;
+    overflow: hidden;
+}
+
+
+
+.mainSection4_right {
+    height: 27em;
+}
+
+.mainSection4_right_title {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 1em;
+}
+
+.mainSection4_right_main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    overflow-y: scroll;
+    max-height: 20em;
+}
+
+.mainSection4_button {
+    width: 95%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    border: none;
+    outline: none;
+    padding: .9em 0;
+    transition: 0.1s;
+}
+
+.mainSection4_button:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
