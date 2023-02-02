@@ -30,6 +30,21 @@ const Header = () => {
           <li className="header_link_item">DIGITAL GIFT CARD</li>
         </ul>
       </div>
+
+      <div className="mobilePart">
+        <div className="emptyspace">
+          <PersonOutlineOutlinedIcon sx={{ fontSize: 27 }} />
+        </div>
+
+        <div className="logo_mobile">
+          <Logo  />
+        </div>
+
+        <div className="mobile_rightPart">
+          <SearchIcon sx={{ fontSize: 27 }} />
+          <ShoppingBagOutlinedIcon sx={{ fontSize: 27 }} />
+      </div>
+      </div> 
     </div>
   )
 }

@@ -85,3 +85,16 @@
     background-color: black;
     color: white;
 }
+
+
+
+@media only screen and (max-width: 758px) {
+    .buying_img_div {
+        height: max-content;
+    }
+    .buying_img {
+        height: max-content;
+
+    }
+}
+

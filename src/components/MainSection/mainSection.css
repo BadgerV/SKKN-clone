@@ -42,3 +42,26 @@
     outline: none;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 758px) {
+    .mainSection {
+        display: flex;
+        flex-direction: column;
+        padding: 0.4em;
+    }
+
+    .mainSection_imgCont {
+        height: max-content;
+    }
+
+    .mainSection_right {
+        padding: 1em;
+    }
+    .mainSection_title {
+        font-size: 1.3em;
+    }
+
+    .mainSection_text {
+        font-size: 1em;
+    }
+}   

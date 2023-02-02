@@ -19,7 +19,7 @@ const Footer = () => {
                 </div>
                 <div className="footer_min_middle">
                     
-                <div className="footer_lists">
+                        <div className="footer_lists">
                             <span className="footer_list_item_special">SKKN BY KIM</span>
                             <span className="footer_list_item">ABOUT US</span>
                             <span className="footer_list_item">SUBSCRIPTION</span>

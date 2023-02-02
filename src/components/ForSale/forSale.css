@@ -48,3 +48,10 @@
     color: black;
     border: 1px solid black;
 }
+
+@media only screen and (max-width: 758px) {
+    .ForSale {
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -50,3 +50,42 @@
     background-color: white;
     border: 1px solid black;
 }
+@media only screen and (max-width: 950px) {
+    .mainSection4 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mainSection4_button {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .mainSection4 {
+        grid-template-columns: 2.5fr 2fr;
+    }   
+}
+
+@media only screen and (max-width: 758px) {
+    .mainSection4 {
+        display: flex;
+        flex-direction: column;
+    }
+    .mainSection4_button {
+        width: 100%;
+    }
+
+    .mainSection4_left {
+        height: max-content;
+    }
+
+    .mainSection4_right {
+        height: max-content;
+    }
+
+    .mainSection4_right_title {
+        font-size: 1.4em;
+        margin-bottom: 0.5em;
+    }
+}

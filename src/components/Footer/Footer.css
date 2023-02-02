@@ -77,3 +77,19 @@
 .footer_bottom_right {
     font-size: 0.7em;
 }
+
+@media only screen and (max-width: 758px) {
+    .footer_main_left {
+        display: none;
+    }
+
+    .footer_top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer_bottom_left {
+        display: none;
+    }
+}
+

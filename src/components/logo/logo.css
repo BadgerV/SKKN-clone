@@ -15,5 +15,25 @@
     line-height: 0.7;
     font-size: 0.7em;
     font-weight: 600;
+}
 
+@media only screen and (max-width: 1000px) {
+    .logo_upper {
+        font-size: 1.9em;
+    }
+
+    .lower_part {
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (max-width: 758px) {
+    .logo_upper {
+        font-size: 1.9em;
+    }
+
+    .lower_part {
+        font-size: 0.5em;
+        font-weight: 200;
+    }
 }

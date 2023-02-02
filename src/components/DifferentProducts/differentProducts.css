@@ -3,7 +3,6 @@
     padding: 1.5em 3em;
     gap: 1.5em;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 3em;
 }
 
 
@@ -14,4 +13,32 @@
 .differentProduct_name {
     font-size: 1.7em;
     font-weight: 500;
+}
+
+
+@media only screen and (max-width: 950px) {
+    .differentProductContainer_img_cont {
+        margin-bottom: 0.3em;
+    }
+
+    .differentProduct_name {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 758px) {
+    .differentProducts {
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .differentProductContainer_img_cont {
+        margin-bottom: 1em;
+    }
+    
+    .differentProduct_name {
+        font-size: 1.5em;
+    }
 }

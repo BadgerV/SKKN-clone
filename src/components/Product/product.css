@@ -72,3 +72,30 @@
     display: flex;
     align-items: center;
 }
+
+
+
+@media only screen and (max-width: 950px) {
+    .product {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .product_pic_part {
+        flex: 2;
+    }
+
+    .product_middle_part {
+        flex: 7;
+    }
+    .peoduct_right_part {
+        flex: 3;
+    }
+    .product_img {
+        max-height: 10em;
+        
+        background-position: center;
+        background-size: cover;
+        aspect-ratio: 1;
+    }
+}
