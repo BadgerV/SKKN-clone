@@ -1,0 +1,30 @@
+.SkinCareProduct_cont {
+    position: absolute;
+    background-color: white;
+    width: 100% !important;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    transition: all 1s ease-in;
+    gap: 2em;
+}
+
+.SkinCareProduct_cont_sub_cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.imageAndText_bottomText_cont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageAndText_bottomText {
+    font-size: 0.8em;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}

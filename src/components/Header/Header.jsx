@@ -1,10 +1,13 @@
 import './header.css';
+import { useState } from 'react';
 import Logo from '../logo/Logo';
 import SearchIcon from '@mui/icons-material/Search';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import SkincareProducts from '../skincareProducts/SkincareProducts';
 
 const Header = () => {
+  const [isVisible, setIsVisible] = useState(false);
   return (
     <div className='Header'>
       <div className="header_upper">
@@ -20,16 +23,28 @@ const Header = () => {
         </div>
       </div>
       <div className="header_lower">
-        <ul className="header_links">
-          <li className="header_link_item">SKINCARE</li>
-          <li className="header_link_item">THE COMPLETE COLLECTION</li>
-          <li className="header_link_item">BUNDLES</li>
-          <li className="header_link_item">REFILLS</li>
-          <li className="header_link_item">HOME ACCESORIES</li>
-          <li className="header_link_item">SUBCRIPTIONS</li>
-          <li className="header_link_item">DIGITAL GIFT CARD</li>
-        </ul>
+          <span className="header_link_item" onMouseEnter={() => setIsVisible(true)}
+        onMouseLeave={() => setIsVisible(false)} >SKINCARE</span> 
+          <span className="header_link_item">THE COMPLETE COLLECTION</span>
+          <span className="header_link_item">BUNDLES</span>
+          <span className="header_link_item">REFILLS</span>
+          <span className="header_link_item">HOME ACCESORIES</span>
+          <span className="header_link_item">SUBCRIPTIONS</span>
+          <span className="header_link_item">DIGITAL GIFT CARD</span>
       </div>
+
+
+      {isVisible && (
+        <div className="hoverMe" onMouseEnter={() => setIsVisible(true)}
+        onMouseLeave={() => setIsVisible(false)}>
+        <SkincareProducts />
+        </div>
+      )}
+
+      
+      
+
+      
 
       <div className="mobilePart">
         <div className="emptyspace">

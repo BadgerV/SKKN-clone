@@ -1,0 +1,17 @@
+.ImageAndText {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    cursor: pointer;
+    transition: 1s all ease-in;
+
+}
+
+.ImageAndText_cont {
+    width: 7em;
+}
+
+.ImageAndText_text {
+    font-size: 0.9em;
+    font-weight: 500;
+}

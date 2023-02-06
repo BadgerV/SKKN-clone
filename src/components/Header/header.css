@@ -6,7 +6,7 @@
         width: 100%;
         position: sticky;
         top: 0;
-        padding: 0.4em 0.3em 0.1em 0.3em;
+        padding: 0.4em 0;
     }
     
 
@@ -33,6 +33,15 @@
         gap: 1.3em;   
         margin-right: 1em;
     }
+
+    .header_lower {
+        display: flex;
+        flex-direction: row;
+        width: 85%;
+        justify-content: space-between;
+        margin: auto;
+        padding: 1em 0;
+    }
     
     
     .header_links {
@@ -41,6 +50,7 @@
         justify-content: center;
         list-style: none;
         gap: 2.3em;
+        position: relative;
     }
     
     .header_link_item {
@@ -49,11 +59,17 @@
         cursor: pointer;
         transition: 0.2s ease-in;
     }
-    
+
+   
     .header_link_item:hover {
         color: gray;
     }
 
+    .hoverMe {
+        margin-top: -1em;
+    transition: all 1s ease-in;
+
+    }
 
     
 @media only screen and (max-width: 1000px) {
