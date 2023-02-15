@@ -2,6 +2,8 @@ import './mainSection2.css';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Buying from '../Buying/Buying';
+import { getAllProducts } from '../../apiCalls';
+import { useEffect } from 'react';
 
 const responsive = {
   superLargeDesktop: {
@@ -23,7 +25,15 @@ const responsive = {
   }
 };
 
+
+
 const MainSection2 = () => {
+  const results = getAllProducts();
+
+useEffect(() => {
+  console.log(results)
+})
+
   return (
     <div className="mainSection2">
       <span className="mainSection2_ritual">THE RITUAL</span>

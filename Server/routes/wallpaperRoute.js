@@ -1,7 +1,9 @@
 const express = require('express');
 const WallpaperSchema = require('../Models/WallaperModel');
-
+const isAuthenticated = require('../middleware/auth');
 const wallpaperRouter = express.Router();
+
+
 
 wallpaperRouter.post('/setWallpaper', async (req, res) => {
     const data = new WallpaperSchema({

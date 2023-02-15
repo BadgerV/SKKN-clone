@@ -23,7 +23,7 @@ const Header = () => {
         </div>
       </div>
       <div className="header_lower">
-          <span className="header_link_item" onMouseEnter={() => setIsVisible(true)}
+          <span className="header_link_item"  onMouseEnter={() => setIsVisible(true)}
         onMouseLeave={() => setIsVisible(false)} >SKINCARE</span> 
           <span className="header_link_item">THE COMPLETE COLLECTION</span>
           <span className="header_link_item">BUNDLES</span>

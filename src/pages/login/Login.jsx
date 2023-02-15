@@ -1,9 +1,29 @@
 import './login.css';
+import { loginCall } from '../../apiCalls';
+
+import { useRef, useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
+import { CircularProgress } from "@material-ui/core";
+
+
+
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 
 
 const Login = () => {
+  const email = useRef();
+  const password = useRef();
+
+  const { user, isFetching, error, dispatch } = useContext(AuthContext);
+  const handleClick = (e) => {
+    e.preventDefault();
+    loginCall(
+      { email: email.current.value, password: password.current.value },
+      dispatch
+    );
+  };
+  
   return (
     <div className='loginPage'>
         <Header />
@@ -12,8 +32,11 @@ const Login = () => {
             <span className="login_text">LOGIN</span>
             <span className="loginPage_sub_text">If you already have a SKKN BY KIM customer account, please enter your login information.</span>
 
-            <input type="text" placeholder='Email' className="loginPage_input loginPage_email" />
-            <input type="password" placeholder='Password' className="loginPage_input loginPage_password" />
+            <input type="text" placeholder='Email' 
+              ref={email}
+               className="loginPage_input loginPage_email" />
+            <input type="password" placeholder='Password' 
+              ref={password} className="loginPage_input loginPage_password" />
 
             <div className="loginPage_forgotpassword_cont">
                 <span className="loginPage_forgotPassword">FORGOT YOUR PASSWORD?</span>
@@ -21,7 +44,11 @@ const Login = () => {
 
             <span className="loginPage_agreeingTerms">By logging in, you agree to our Terms, and Privacy Policy</span>
 
-            <button className="loginPage_button loginPage_button1">LOG IN</button>
+            <button className="loginPage_button loginPage_button1" onClick={handleClick}>{isFetching ? (
+                <CircularProgress color="white" size="20px" />
+              ) : (
+                "Create new account"
+              )}</button>
             
 
             <div className="loginPage_continue_cont">

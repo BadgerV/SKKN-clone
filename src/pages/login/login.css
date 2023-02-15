@@ -7,7 +7,7 @@
 }
 
 .loginPage_main {
-    width: max(45%, 600px);
+    width: max(40%, 500px);
     display: flex;
     flex-direction: column;
     padding: 2em;

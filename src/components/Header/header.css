@@ -6,7 +6,7 @@
         width: 100%;
         position: sticky;
         top: 0;
-        padding: 0.4em 0;
+        padding: 0.5em 0;
     }
     
 
@@ -44,14 +44,6 @@
     }
     
     
-    .header_links {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        list-style: none;
-        gap: 2.3em;
-        position: relative;
-    }
     
     .header_link_item {
         font-weight: 500;
@@ -66,9 +58,10 @@
     }
 
     .hoverMe {
-        margin-top: -1em;
+        transition: all .3s;
+        position: relative;
+        top: -1em;
     transition: all 1s ease-in;
-
     }
 
     

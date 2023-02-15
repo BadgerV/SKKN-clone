@@ -1,21 +1,48 @@
 import Footer from '../../components/Footer/Footer';
+
+import { registerCall } from '../../apiCalls';
+
+import { useRef, useContext } from 'react';
+import { AuthContext } from '../../context/AuthContext';
+import { CircularProgress } from "@material-ui/core";
 import Header from '../../components/Header/Header';
 import './signUp.css';
 
 
 const SignUp = () => {
+    const firstName = useRef();
+    const lastName = useRef();
+    const email = useRef();
+    const password = useRef();
+    const confirmPassword = useRef();
+
+    const { user, isFetching, error, dispatch } = useContext(AuthContext);
+    const handleClick = (e) => {
+    e.preventDefault();
+    registerCall(
+      { firstName : firstName.current.value,
+        lastName : lastName.current.value,
+        email: email.current.value, 
+        password: password.current.value,
+        confirmPassword: confirmPassword.current.value,
+    },
+      dispatch
+    );
+  };
+  
+  console.log(user);
   return (
     <div className="signUp_page">
         <Header />
 
         <div className="signUp_main">
             <span className="signUp_createAcc">CREATE ACCOUNT</span>
-            <input type="text" placeholder='First Name' className="signUpinput signUpFirstName" />
-            <input type="text" placeholder='Last Name'className="signUpinput signUpLastName" />
-            <input type="text" placeholder='Email Address'className="signUpinput signUpEmail" />
-            <input type="password" placeholder='Password' className="signUpinput signUpPassword" />
+            <input type="text" ref={firstName} placeholder='First Name' className="signUpinput signUpFirstName" />
+            <input type="text" ref={lastName} placeholder='Last Name'className="signUpinput signUpLastName" />
+            <input type="email" ref={email} placeholder='Email Address'className="signUpinput signUpEmail" />
+            <input type="password" ref={password} placeholder='Password' className="signUpinput signUpPassword" />
             <span className="signUp_attachToPassword">Must be at least 6 characters long</span>
-            <input type="password" placeholder='Confirm Password' className="signUpinput signUpPassword" />
+            <input type="password" ref={confirmPassword}placeholder='Confirm Password' className="signUpinput signUpPassword" />
             <span className="signUp_attachToPassword">Must be at least 6 characters long</span>
 
             <form className='signUp_form'>
@@ -33,7 +60,11 @@ const SignUp = () => {
                 </span>
             </form>
 
-            <button className="signUp_register">REGISTER</button>
+            <button className="signUp_register" onClick={handleClick}>{isFetching ? (
+                <CircularProgress color="inherit" size="20px" />
+              ) : (
+                "REGISTER"
+              )}</button>
 
             <div className="sigup_textCOnt">
                 <span className="signUp_alreadyHave">Already have an account? LOGIN</span>
