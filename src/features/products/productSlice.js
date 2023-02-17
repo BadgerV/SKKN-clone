@@ -5,7 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     allProducts : [],
     instagramProducts : [],
-    largeImagePictureLink : "",
+    wallpaperLink : "",
     isLoading : true
 }
 
@@ -26,12 +26,15 @@ const productSlice = createSlice({
         },
         getProductFailure: (state) => {
             state.isLoading = false
+        },
+        getWallpaperSuccess : (state, action) => {
+            state.wallpaperLink = action.payload;
         }
     }
 })
 
 
-export const { getProductStart, getProductSuccess, getProductFailure } = productSlice.actions;
+export const { getProductStart, getProductSuccess, getProductFailure, getWallpaperSuccess } = productSlice.actions;
 
 
 export default productSlice.reducer;

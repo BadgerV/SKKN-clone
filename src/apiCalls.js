@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { getProductSuccess, getProductStart, getProductFailure } from './features/products/productSlice';
+import { getProductSuccess, getProductStart, getProductFailure, getWallpaperSuccess } from './features/products/productSlice';
 import {loginStart,loginSuccess,loginFailure} from './features/user/userAuth';
 
 export const loginCall = async(userCredentials,dispatch ) => {
@@ -66,5 +66,21 @@ export const getAllProducts = async (dispatch) => {
     } catch (err) {
         dispatch(getProductFailure())
         
+    }
+}
+
+export const getWallpaperLink = async (dispatch) => {
+    dispatch(getProductStart());
+
+    try {
+        const res = await axios({
+            method: "get",
+            baseURL: "http://localhost:3000/api/",
+                url: `getWallpaper`,
+            }); 
+
+        dispatch(getWallpaperSuccess(res.data[0].wallpaperLink))
+    } catch(err) {
+        dispatch(getProductFailure())
     }
 }

@@ -1,0 +1,52 @@
+.sellerPage_header {
+    display : flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em 3.5em;
+}
+
+.sellerPage_welcomeText {
+    color: #4d2684;
+    font-size: 1em;
+}
+
+.sellerPage_header_right {
+    display: flex;
+    gap: 1em;
+}
+
+.sellerPage_main {
+    width: 100%;
+    padding: 0 2em;
+    position: relative;
+}
+
+.sellerPage_main_header {
+    display: flex;
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-between;
+}
+
+.sellerPage_myProducts_header, .sellerPage_postProduct_header ,.sellerPage_editProduct_header {
+    font-weight: bold;
+    font-size: 0.9em;
+    outline: 1px solid #4d2684;
+    padding: 1em 5em;
+    background-color: #e7b03e;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.sellerPage_container {
+    outline: 1px solid #4d2684;
+    margin-top: 1em;
+    width: 80%;
+    height: 200px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
