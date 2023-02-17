@@ -25,7 +25,6 @@ const LargeImage = () => {
    }, [])
 
    useEffect(() => {
-    console.log(wallpaperLink)
    }, [wallpaperLink])
 
 

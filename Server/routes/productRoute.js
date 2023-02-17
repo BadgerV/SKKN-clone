@@ -106,7 +106,7 @@ route.get("/post-product/get-my-products/:id", isAuthenticated, async (req, res)
     }
 })
 
-route.get("/post-product/get-products", isAuthenticated, async (req, res) => {
+route.get("/post-product/get-products", async (req, res) => {
     
     try {
         const allProducts = await productModel.find();

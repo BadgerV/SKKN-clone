@@ -2,7 +2,8 @@ import './login.css';
 import { loginCall } from '../../apiCalls';
 
 import { useRef, useContext } from 'react';
-import { AuthContext } from '../../context/AuthContext';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { CircularProgress } from "@material-ui/core";
 
 
@@ -12,10 +13,13 @@ import Footer from '../../components/Footer/Footer';
 
 
 const Login = () => {
+
+  const {isLoading} = useSelector((store) => store.user);
+
+  const dispatch = useDispatch();
   const email = useRef();
   const password = useRef();
 
-  const { user, isFetching, error, dispatch } = useContext(AuthContext);
   const handleClick = (e) => {
     e.preventDefault();
     loginCall(
@@ -23,7 +27,7 @@ const Login = () => {
       dispatch
     );
   };
-  
+   
   return (
     <div className='loginPage'>
         <Header />
@@ -44,7 +48,7 @@ const Login = () => {
 
             <span className="loginPage_agreeingTerms">By logging in, you agree to our Terms, and Privacy Policy</span>
 
-            <button className="loginPage_button loginPage_button1" onClick={handleClick}>{isFetching ? (
+            <button className="loginPage_button loginPage_button1" onClick={handleClick}>{isLoading ? (
                 <CircularProgress color="white" size="20px" />
               ) : (
                 "Create new account"

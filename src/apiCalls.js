@@ -1,7 +1,10 @@
 import axios from 'axios';
 
+import { getProductSuccess, getProductStart, getProductFailure } from './features/products/productSlice';
+import {loginStart,loginSuccess,loginFailure} from './features/user/userAuth';
+
 export const loginCall = async(userCredentials,dispatch ) => {
-    dispatch({type : "LOGIN_START"})
+    dispatch(loginStart());
 
     try {
         const res = await axios({
@@ -18,15 +21,14 @@ export const loginCall = async(userCredentials,dispatch ) => {
             localStorage.setItem("user", JSON.stringify(res.data.data))
         }
         
-        dispatch({ type: "LOGIN_SUCCESS", payload: res.data.data })
+        dispatch(loginSuccess(res.data.data))
     } catch (err) {
-        dispatch({ type: "LOGIN_FAILURE", payload: err })
+        dispatch(loginFailure())
         
     }   
 }
 
 export const registerCall = async(userCredentials, dispatch) => {
-    dispatch({type : "REGISTER_START"})
     try {
         const res = await axios({
         method: "post",
@@ -41,14 +43,18 @@ export const registerCall = async(userCredentials, dispatch) => {
         }
         });
         
-        dispatch({ type: "REGISTER_SUCCESS", payload: res.data.data })
     } catch (err) {
-        dispatch({ type: "REGISTER_FAILURE", payload: err })
+        console.log(err)
         
     }      
 }
 
-export const getAllProducts = async() => {
+
+
+
+export const getAllProducts = async (dispatch) => {
+    dispatch(getProductStart());
+
     try {
         const res = await axios({
             method: "get",
@@ -56,8 +62,9 @@ export const getAllProducts = async() => {
                 url: `post-product/get-products`,
             });
 
-        return res.data
-    }catch (err) {
-
+        dispatch(getProductSuccess(res.data))
+    } catch (err) {
+        dispatch(getProductFailure())
+        
     }
 }
