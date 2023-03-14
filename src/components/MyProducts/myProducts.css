@@ -1,0 +1,70 @@
+.myProducts_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding : 0.2rem;
+    overflow-y: scroll;
+}
+
+.myProducts_oneProducts {
+    display: flex;
+    flex-direction: row;
+    padding : 0.2rem 1.5rem;
+    height: 10rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.myProductImageCont {
+    height : 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.MyProductImage {
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+
+.MyProductSecondPart {
+    flex : 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.myProductName {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: grey;
+}
+
+.myProductStarAndSold {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+.myProductStars {
+    letter-spacing: 1px;
+}
+.myProductSold {
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: grey;
+
+}
+
+.myProductPrice {
+    color: grey;
+    font-weight: 1.1rem;
+    font-weight: bold;
+}
+
+.myProductThirdPart {
+    
+}

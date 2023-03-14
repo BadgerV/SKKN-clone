@@ -1,3 +1,4 @@
+
 .sellerPage_header {
     display : flex;
     flex-direction: row;
@@ -42,10 +43,9 @@
 }
 
 .sellerPage_container {
-    outline: 1px solid #4d2684;
     margin-top: 1em;
     width: 80%;
-    height: 200px;
+    height: 75vh;
     position: relative;
     left: 50%;
     transform: translateX(-50%);

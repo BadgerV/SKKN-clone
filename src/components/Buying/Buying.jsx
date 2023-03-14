@@ -4,7 +4,6 @@ import StarRatingComponent from 'react-star-rating-component';
 
 
 const Buying = (props) => {
-    console.log(props.props.imageLink);
     const realName = props.props.name.toUpperCase();
     const reaelRating = +props.props.rating;
   return (

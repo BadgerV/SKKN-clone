@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { getProductSuccess, getProductStart, getProductFailure, getWallpaperSuccess } from './features/products/productSlice';
+import { getProductSuccess, getProductStart, getProductFailure, getWallpaperSuccess, getMyProductSuccess,postMyProductSuccess,postProductFailure, updateProductSuccess } from './features/products/productSlice';
 import {loginStart,loginSuccess,loginFailure} from './features/user/userAuth';
 
 export const loginCall = async(userCredentials,dispatch ) => {
@@ -83,4 +83,71 @@ export const getWallpaperLink = async (dispatch) => {
     } catch(err) {
         dispatch(getProductFailure())
     }
+}
+
+
+export const getMyProducts = async (id, dispatch) => {
+    dispatch(getProductStart());
+
+    try {
+        const res = await axios({
+            method: "get",
+            baseURL: "http://localhost:3000/api/",
+                url: `post-product/get-my-products/${id}`,
+            }); 
+
+        dispatch(getMyProductSuccess(res.data))
+    } catch(err) {
+        dispatch(getProductFailure())
+    }
+}
+
+export const postMyProduct = async (userCredentials, dispatch) => {
+    dispatch(getProductStart());
+
+    try {
+        const res = await axios({
+            method: "post",
+            baseURL: "http://localhost:3000/api/",
+                url: `post-product`,
+                data: {
+                    name: userCredentials.name,
+                    category : userCredentials.category,
+                    price : userCredentials.price,
+                    imageLink : userCredentials.imageLink,
+                    description : userCredentials.desc,
+                    title : userCredentials.title,
+                    userId : userCredentials.userId
+            }
+            }); 
+            dispatch(postMyProductSuccess(res.data._id));
+
+    } catch(err) {
+        dispatch(postProductFailure(err))
+    }    
+}
+
+export const updateProduct = async (userCredentials, id, dispatch) => {
+    dispatch(getProductStart())
+
+    try {
+        const res = await axios({
+            method: "post",
+            baseURL: "http://localhost:3000/api/",
+                url: `post-product/${id}`,
+                data: {
+                    name: userCredentials.name,
+                    category : userCredentials.category,
+                    price : userCredentials.price,
+                    imageLink : userCredentials.imageLink,
+                    description : userCredentials.desc,
+                    title : userCredentials.title,
+                    userId : userCredentials.userId
+            }
+            }); 
+            dispatch(updateProductSuccess(res));
+
+    } catch(err) {
+        dispatch(postProductFailure(err))
+    }  
 }

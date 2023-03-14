@@ -1,31 +1,37 @@
-import './home.css';
+import React from 'react';
+import './home.css'; // Import your CSS file here
 
-import Header from '../../components/Header/Header';
-import LargeImage from '../../components/LargeImage/LargeImage';
-import MainSection from '../../components/MainSection/MainSection';
-import MainSection2 from '../../components/MainSection2/MainSection2';
-import MainSection3 from '../../components/MainSection3/MainSection3';
-import MainSection4 from '../../components/MainSection4/MainSection4';
-import ForSale from '../../components/ForSale/ForSale';
-import DifferentProducts from '../../components/DifferentProducts/DifferentProducts';
-import InstagramProducts from '../../components/InstagramProduct/InstagramProduct';
-import Footer from '../../components/Footer/Footer';
+import HeaderNew from '../../components/HeaderNew/HeaderNew';
+import Splash from '../../components/splash/Splash';
+import RecentlyAdded from '../../components/RecentlyAdded/RecentlyAdded';
 
-const Home = () => {
+const ParallaxImage = () => {
+  const handleScroll = () => {
+    const parallax = document.querySelector('.parallax-image');
+    const scrolled = window.pageYOffset;
+    parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+  };
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="homePage">
-        <Header />
-        <LargeImage />
-        <MainSection />
-        <MainSection2 />
-        <MainSection3 />
-        <MainSection4 />
-        <ForSale />
-        <DifferentProducts />
-        <InstagramProducts />
-        <Footer />
+    <>
+    <div className="parallax-image">
+          <HeaderNew />
+          <Splash />
+          <RecentlyAdded />
     </div>
-  )
-}
 
-export default Home
+
+    </>
+    
+  );
+};
+
+export default ParallaxImage;

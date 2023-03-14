@@ -21,7 +21,7 @@ route.post("/register", async (req, res) => {
         const { firstName, lastName, email, password, confirmPassword } = req.body;
         //Check emptyness of the incoming data
         if (!firstName || !lastName || !email || !password || !confirmPassword) {
-            return res.json({ message: 'Please enter all the details' })
+            return res.json({ message: 'Please enter all the details' }) 
         }
 
         if (password !== confirmPassword) {

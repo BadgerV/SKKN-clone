@@ -1,0 +1,61 @@
+.headerNew_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    position: sticky;
+
+
+    padding: 1.5rem;
+    background-color: hsla(0, 0%, 0%, 0.484);
+}
+
+.newHeader_logoContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.newHeaderLogImg {
+    max-height: 3rem;
+    aspect-ratio: 1;
+}
+
+
+.newHeader_logoText {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+}
+.newHeaderButtonContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.buttonNew {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    font-size: 0.9rem;
+    border-radius:5px;
+    outline: none;
+    border: 2px solid white;
+    font-weight: 400;
+    color : white;
+    z-index: 999999999999999999;
+
+    transition: 0.1s all ease;
+}
+
+.buttonNew:hover {
+    background-color: white;
+    color: black;
+    box-shadow: rgba(255, 253, 253, 0.24) 0px 3px 8px;
+}
+
+.buttonNew:active {
+    scale: 0.95;
+    box-shadow: rgba(240, 240, 240, 0.24) 0px 5px 15px;
+}

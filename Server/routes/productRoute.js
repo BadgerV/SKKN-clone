@@ -7,7 +7,7 @@ const userModel = require('../Models/UserModel');
 const productModel = require('../Models/ProductModel')
 
 
-route.post("/post-product", isAuthenticated, async (req, res) => {
+route.post("/post-product", async (req, res) => {
     try {
         const {name, category, price, imageLink, description, title} = req.body;
         if (!name || !category || !price || !imageLink || !description) {
@@ -81,7 +81,7 @@ route.delete("/post-product/:id", async (req, res) => {
 })
 
 //get all your oistproducts
-route.get("/post-product/get-my-products/:id", isAuthenticated, async (req, res) => {
+route.get("/post-product/get-my-products/:id", async (req, res) => {
     const myProductsIDs = [];
     const myProducts = [];
     try {
@@ -89,7 +89,7 @@ route.get("/post-product/get-my-products/:id", isAuthenticated, async (req, res)
         user.products.map((product) => {
             myProductsIDs.push(product)
         })
-
+ 
         for(let i = 0; i < myProductsIDs.length; i++) {
             const theProduct = await productModel.findById(myProductsIDs[i]);
             myProducts.push(theProduct)

@@ -5,6 +5,7 @@ import Login from './pages/login/Login';
 import SignUp from './pages/signUp/SignUp';
 import SellerPage from './pages/sellerPage/SellerPage';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import {
   Routes,
@@ -12,24 +13,27 @@ import {
 } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate()
   const user = useSelector((store) => store.user.user);
 
+  const userExists = JSON.parse(localStorage.getItem("user"));
 
-  
-  
-    const userExists = JSON.parse(localStorage.getItem("user"));
-
-
+  // useEffect(() => {
+  //   if(userExists.accType === "seller") {
+  //     navigate("/seller-page")
+  //   }
+  // }, [])
   
   return (
     <div className="App">
-      <Routes>
-        {/* <Route exact path = "/" element = {user || userExists ? <Home /> : <Login />} />
+      {/* <Routes>
+         <Route exact path = "/" element = {user || userExists ? <Home /> : <Login />} />
         <Route exact path="/login" element={user || userExists ? <Home /> : <Login />} />
-        <Route exact path="/signup" element={user || userExists ? <Home /> : <SignUp />}/> */}
+        <Route exact path="/signup" element={user || userExists ? <Home /> : <SignUp />}/> 
 
-        <Route exact path = "/" element = {<SellerPage />} />
-      </Routes>
+        <Route exact path = "/seller-page" element = {<SellerPage />} />
+      </Routes> */}
+      < Home />
     </div>
   );
 }
