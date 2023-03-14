@@ -1,5 +1,6 @@
-import './recentlyAdded.css';
+import './popularProducts.css';
 import NewProduct from '../NewProduct/NewProduct';
+
 
 const products = [
     {
@@ -39,10 +40,10 @@ const products = [
 ]
 
 
-const RecentlyAdded = () => {
+const PopularProducts = () => {
   return (
     <div className='Recently'>
-        <span className="recentlyAdded_header">Recently Added</span>
+        <span className="recentlyAdded_header">Popular Products</span>
 
         <div className="RecentlyAdded">
             {products.map((prod,index) => {
@@ -55,4 +56,4 @@ const RecentlyAdded = () => {
   )
 }
 
-export default RecentlyAdded
+export default PopularProducts
