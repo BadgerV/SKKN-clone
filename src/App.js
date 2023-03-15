@@ -11,6 +11,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import GeneralPage from './pages/GeneralPage/GeneralPage';
 
 function App() {
   const navigate = useNavigate()
@@ -33,7 +34,7 @@ function App() {
 
         <Route exact path = "/seller-page" element = {<SellerPage />} />
       </Routes> */}
-      < Home />
+      <GeneralPage />
     </div>
   );
 }

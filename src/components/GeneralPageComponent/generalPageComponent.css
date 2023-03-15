@@ -1,0 +1,9 @@
+.GeneralPageComponent {
+    background: no-repeat url('../../assets//background-image.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.GeneralPageComponentContainer {
+    background-color: rgba(1, 1, 1, 0.257);
+}

@@ -40,6 +40,7 @@ const TheCategories = [
 const Categories = () => {
   return (
     <div className='categories'>
+        <span className="categories_header">Categories</span>
         <div className="categoriesContainer">
             {
                 TheCategories.map((cat, index) => {
