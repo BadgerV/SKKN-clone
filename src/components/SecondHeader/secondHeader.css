@@ -2,9 +2,12 @@
     display: flex;
     flex-direction: row;
     padding: 1rem 1rem;
+    position: -webkit-sticky;
+    position: sticky;
     align-items: center;
 
     justify-content: space-between;
+
 }
 
 .SeconHeaderLeft {
@@ -44,6 +47,19 @@
     display: flex;
     align-items: center;
     gap : 2rem;
+}
+
+.SecondHeaderInputCont {
+    position: relative;
+}
+
+.SearchIcon_SecondHeader {
+    position: absolute;
+    height: 1.5rem;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 .SeconheaderSearch {

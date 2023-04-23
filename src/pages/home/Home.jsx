@@ -1,11 +1,11 @@
-import React from 'react';
-import './home.css'; // Import your CSS file here
+import React from "react";
+import "./home.css"; // Import your CSS file here
 
-import HeaderNew from '../../components/HeaderNew/HeaderNew';
-import Splash from '../../components/splash/Splash';
-import RecentlyAdded from '../../components/RecentlyAdded/RecentlyAdded';
-import PopularProducts from '../../components/PopularProducts/PopularProducts';
-import Categories from '../../components/Categories/Categories';
+import HeaderNew from "../../components/HeaderNew/HeaderNew";
+import Splash from "../../components/splash/Splash";
+import RecentlyAdded from "../../components/RecentlyAdded/RecentlyAdded";
+import PopularProducts from "../../components/PopularProducts/PopularProducts";
+import Categories from "../../components/Categories/Categories";
 
 const ParallaxImage = () => {
   // const handleScroll = () => {
@@ -24,17 +24,14 @@ const ParallaxImage = () => {
 
   return (
     <>
-    <div className="parallax-image">
-          <HeaderNew />
-          <Splash />
-          <RecentlyAdded />
-          <PopularProducts />
-          <Categories />
-    </div>
-
-
+      <div className="parallax-image">
+        <HeaderNew />
+        <Splash />
+        <RecentlyAdded />
+        <PopularProducts />
+        <Categories />
+      </div>
     </>
-    
   );
 };
 

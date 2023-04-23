@@ -1,75 +1,80 @@
 .SplashAlpha {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    background-color: hsla(0, 0%, 0%, 0.484);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: hsla(0, 0%, 0%, 0.484);
 
-    justify-content: center;
-    padding: 0rem 1.5rem;
+  justify-content: center;
+  padding: 0rem 1.5rem;
 }
 .SplashContainer {
-    width: 100%;
+  width: 100%;
 }
 
 .large_image {
-    width: 100%;
-    border-radius: 2px;
-    height: 85vh;
-    background-position: center;
-    background-size: cover;
-    position: relative;
+  width: 100%;
+  border-radius: 2px;
+  height: 85vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
 .largeImage_container {
-    position: absolute;
-    top: 65%;
-    left: 2%;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
+  position: absolute;
+  top: 65%;
+  left: 2%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
 }
 
 .largeImage_text {
-    font-size: 1.5em;
-    font-weight: 500;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}   
+  font-size: 1.5em;
+  font-weight: 500;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
 
 .largeImage_subText {
-    color: white;
-    margin-bottom: 1em;
-    font-weight: 500;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  color: white;
+  margin-bottom: 1em;
+  font-weight: 500;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 .largeImage_shopNow {
-    font-size: 0.75em;
-    padding: 1em 0.8em;
-    border-radius: 5px;
-    background-color: white;
-    max-width: fit-content;
-    cursor: pointer;
-    transition: all 0.1s;
+  font-size: 0.75em;
+  padding: 1em 0.8em;
+  border-radius: 5px;
+  background-color: white;
+  max-width: fit-content;
+  cursor: pointer;
+  transition: all 0.1s;
 }
 
 .largeImage_shopNow:hover {
-    border: 1px solid white;
-    background-color: black;
-    color: white;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (max-width: 572px) {
+  .SplashAlpha {
+    padding: 0 0.5rem;
+  }
 }
 @media only screen and (max-width: 758px) {
+  .largeImage_container {
+    top: 50%;
+  }
+  .largeImage_text {
+    font-size: 1.3em;
+  }
 
-    .largeImage_container {
-        top: 50%;
-    }
-    .largeImage_text {
-        font-size: 1.3em;
-    }
-
-    .largeImage_subText {
-        font-size: 0.9em;
-    }
+  .largeImage_subText {
+    font-size: 0.9em;
+  }
 }

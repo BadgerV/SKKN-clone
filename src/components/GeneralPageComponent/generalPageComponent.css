@@ -5,5 +5,15 @@
 }
 
 .GeneralPageComponentContainer {
-    background-color: rgba(1, 1, 1, 0.257);
+    background-color: rgba(1, 1, 1, 0.626);
+}
+
+.GeneralMini {
+    background: no-repeat url('../../assets//image10.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.GeneralMiniCont {
+    background-color: rgba(1, 1, 1, 0.38);
 }

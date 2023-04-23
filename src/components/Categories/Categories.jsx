@@ -1,6 +1,7 @@
 import Category from '../Category/Category';
 import './categories.css';
 
+
 import image1 from '../../assets/image10.jpg';
 import image2 from '../../assets/image11.jpg';
 import image3 from '../../assets/image12.jpg';
@@ -45,7 +46,7 @@ const Categories = () => {
             {
                 TheCategories.map((cat, index) => {
                     return(
-                        <Category key = {index} {...cat} />
+                        <Category key = {index} {...cat}  />
                     )
                 })
             }

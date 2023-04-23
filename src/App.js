@@ -1,20 +1,17 @@
-import './App.css';
-import { useEffect } from 'react';
-import Home from './pages/home/Home';
-import Login from './pages/login/Login';
-import SignUp from './pages/signUp/SignUp';
-import SellerPage from './pages/sellerPage/SellerPage';
-import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import "./App.css";
+import { useEffect } from "react";
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
+import SignUp from "./pages/signUp/SignUp";
+import SellerPage from "./pages/sellerPage/SellerPage";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-import {
-  Routes,
-  Route,
-} from "react-router-dom";
-import GeneralPage from './pages/GeneralPage/GeneralPage';
+import { Routes, Route } from "react-router-dom";
+import GeneralPage from "./pages/GeneralPage/GeneralPage";
 
 function App() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const user = useSelector((store) => store.user.user);
 
   const userExists = JSON.parse(localStorage.getItem("user"));
@@ -24,7 +21,7 @@ function App() {
   //     navigate("/seller-page")
   //   }
   // }, [])
-  
+
   return (
     <div className="App">
       {/* <Routes>
@@ -34,7 +31,12 @@ function App() {
 
         <Route exact path = "/seller-page" element = {<SellerPage />} />
       </Routes> */}
-      <GeneralPage />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/products" element={<GeneralPage />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/signup" element={<SignUp />} />
+      </Routes>
     </div>
   );
 }

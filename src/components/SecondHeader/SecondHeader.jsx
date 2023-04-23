@@ -1,5 +1,5 @@
 import './secondHeader.css'
-import Menu from '../../assets/Menu.png';
+import Search from '../../assets/SearchIcon.png';
 import Cart from '../../assets/CartIcon.png';
 
 const SecondHeader = () => {
@@ -13,7 +13,10 @@ const SecondHeader = () => {
         </div>
 
         <div className="SecondHeaderRight">
-            <input type= "text" placeholder='Search' className='SeconheaderSearch'/>
+            <div className="SecondHeaderInputCont">
+                <input type= "text" placeholder='Search' className='SeconheaderSearch'/>
+                <img src={Search} alt="Search " className='SearchIcon_SecondHeader' />
+            </div>
             <button className="secondHeaderSignIn">Sign In</button>
 
             <div className="secondHeader_cartCont">
