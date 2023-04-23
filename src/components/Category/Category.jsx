@@ -1,5 +1,5 @@
-import './category.css';
-import image from '../../assets/image17.jpg';
+import "./category.css";
+import image from "../../assets/image17.jpg";
 import { Link } from "react-router-dom";
 
 const Category = ({ name, desc, image }) => {
@@ -15,11 +15,9 @@ const Category = ({ name, desc, image }) => {
       <span className="categoryName">{name}</span>
       <span className="categoryDescription">{desc}</span>
 
-      <Link to="/products">
-        <button className="categoryButton">SHOP NOW</button>
-      </Link>
+      <button className="categoryButton">SHOP NOW</button>
     </div>
   );
 };
 
-export default Category
+export default Category;
